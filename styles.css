@@ -1,0 +1,94 @@
+*{margin: 0; padding: 0;}
+
+.main-content {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+}
+
+.grid-row-span-25 {
+  grid-row: span 25;
+}
+.header{
+  grid-column-start:1;
+  grid-column-end: 32;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/max_walkout.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+.navigation-links {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navigation-links a {
+  color: silver;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: rgb(130, 26, 26);
+  display: block;
+  margin: auto;
+  transition: 0.7s;
+}
+
+.links ul li:hover::after{ width: 100%;}
+
+.title {
+  font-size: 150px;
+  width: 90%;
+  color: silver;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+/* main page */
+
+.goat {
+  grid-column-start: 1;
+  grid-column-end: 36;
+  width: 80%;
+  margin: auto;
+  text-align:center;
+  padding: 25px;
+}
+
+.second-title {
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.article-1 {
+  grid-column: 5;
+  color: white;
+}
+.article-2 {
+  color:white;
+  grid-column: 30;
+}
+.article-3 {
+  color: white;
+  grid-column: 5;
+  grid-row: 28
+}
+.article-4 {
+  color:white;
+  grid-row: 28;
+  grid-column: 30;
+}
